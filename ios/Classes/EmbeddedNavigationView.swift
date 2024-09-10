@@ -209,7 +209,7 @@ public class FlutterMapboxNavigationView : NavigationFactory, FlutterPlatformVie
         
         if(_wayPoints.count > 3 && arguments?["mode"] == nil)
         {
-            _navigationMode = "driving"
+            _navigationMode = "walking"
         }
 
         var mode: ProfileIdentifier = .automobileAvoidingTraffic

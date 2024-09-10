@@ -27,10 +27,10 @@ public class NavigationFactory : NSObject, FlutterStreamHandler
     var _allowsUTurnAtWayPoints: Bool?
     var _isOptimized = false
     var _language = "en"
-    var _voiceUnits = "imperial"
+    var _voiceUnits = "metric"
     var _mapStyleUrlDay: String?
     var _mapStyleUrlNight: String?
-    var _zoom: Double = 13.0
+    var _zoom: Double = 22.0
     var _tilt: Double = 0.0
     var _bearing: Double = 0.0
     var _animateBuildRoute = true
@@ -94,7 +94,7 @@ public class NavigationFactory : NSObject, FlutterStreamHandler
         
         if(_wayPoints.count > 3 && arguments?["mode"] == nil)
         {
-            _navigationMode = "driving"
+            _navigationMode = "walking"
         }
         
         if(_wayPoints.count > 0)
@@ -214,7 +214,7 @@ public class NavigationFactory : NSObject, FlutterStreamHandler
         _simulateRoute = arguments?["simulateRoute"] as? Bool ?? _simulateRoute
         _isOptimized = arguments?["isOptimized"] as? Bool ?? _isOptimized
         _allowsUTurnAtWayPoints = arguments?["allowsUTurnAtWayPoints"] as? Bool
-        _navigationMode = arguments?["mode"] as? String ?? "drivingWithTraffic"
+        _navigationMode = arguments?["mode"] as? String ?? "walking"
         _showReportFeedbackButton = arguments?["showReportFeedbackButton"] as? Bool ?? _showReportFeedbackButton
         _showEndOfRouteFeedback = arguments?["showEndOfRouteFeedback"] as? Bool ?? _showEndOfRouteFeedback
         _enableOnMapTapCallback = arguments?["enableOnMapTapCallback"] as? Bool ?? _enableOnMapTapCallback

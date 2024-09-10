@@ -215,7 +215,7 @@ class NavigationActivity : AppCompatActivity() {
         MapboxNavigationApp.current()!!.requestRoutes(
             routeOptions = RouteOptions
                 .builder()
-                .applyDefaultNavigationOptions()
+                .applyDefaultNavigationOptions("walking")
                 .applyLanguageAndVoiceUnitOptions(this)
                 .coordinatesList(waypointSet.coordinatesList())
                 .waypointIndicesList(waypointSet.waypointsIndices())
