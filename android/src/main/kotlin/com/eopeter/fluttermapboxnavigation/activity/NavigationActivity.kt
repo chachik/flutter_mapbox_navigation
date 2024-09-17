@@ -16,7 +16,7 @@ import com.eopeter.fluttermapboxnavigation.models.MapBoxEvents
 import com.eopeter.fluttermapboxnavigation.models.MapBoxRouteProgressEvent
 import com.eopeter.fluttermapboxnavigation.models.Waypoint
 import com.eopeter.fluttermapboxnavigation.models.WaypointSet
-import com.eopeter.fluttermapboxnavigation.utilities.CustomInfoPanelEndNavButtonBinderForEmbedded
+import com.eopeter.fluttermapboxnavigation.utilities.CustomInfoPanelEndNavButtonBinder
 import com.eopeter.fluttermapboxnavigation.utilities.PluginUtilities
 import com.eopeter.fluttermapboxnavigation.utilities.PluginUtilities.Companion.sendEvent
 import com.google.gson.Gson
@@ -114,7 +114,7 @@ class NavigationActivity : AppCompatActivity() {
         // Add custom view binders
         binding.navigationView.customizeViewBinders {
             infoPanelEndNavigationButtonBinder =
-                CustomInfoPanelEndNavButtonBinderForEmbedded(act)
+                CustomInfoPanelEndNavButtonBinder(act)
         }
 
         MapboxNavigationApp.current()?.registerBannerInstructionsObserver(this.bannerInstructionObserver)
