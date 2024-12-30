@@ -43,7 +43,7 @@ class PluginUtilities {
         }
 
         fun sendEvent(event: MapBoxEvents, data: String = "") {
-            var clean_data = data.replace("\"", "'")
+            var clean_data = data.replace("\"", "\\\"")
             val jsonString =
                 if ((MapBoxEvents.MILESTONE_EVENT == event || event == MapBoxEvents.USER_OFF_ROUTE || event == MapBoxEvents.ROUTE_BUILT || event == MapBoxEvents.ON_MAP_TAP) && data != "") "{" +
                         "  \"eventType\": \"${event.value}\"," +
