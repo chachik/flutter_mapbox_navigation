@@ -54,6 +54,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace "com.dormmom.flutter_mapbox_navigation"
+    
     compileSdkVersion 33
 
     sourceSets {
